@@ -87,6 +87,11 @@ div.mes-projets .projet {
   overflow: hidden;
 }
 
+div.mes-projets .projets h2 {
+  font-size: 16pt;
+  height: 70px;
+}
+
 div.mes-projets .projet .carrousel {
   width: 250px;
   height: 175px;
@@ -181,38 +186,56 @@ div.mes-projets .projet p {
 }
 
 div.mes-projets .link {
-  padding: 10px;
+  width: 0;
   text-decoration: none;
-  color: black;
-  font-weight: 700;
-  position: relative;
+  background-color: black;
+  transition: all 0.5s ease;
+  padding: 10px 0;
 }
 
 div.mes-projets .link:hover {
   color: rgb(255, 255, 255);
-  background-color: #060b15;
+  width: 100%;
 }
 
-div.mes-projets .link::after {
-  content: " ";
-  border-right: red 2px solid;
-  border-top: red 2px solid;
-  transform: rotateZ(45deg);
-  position: absolute;
-  height: 8px;
-  width: 8px;
-  top: 14px;
-  right: 20px;
+div.mes-projets .link span {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+div.mes-projets .link:hover span {
+  color: rgb(255, 255, 255);
+}
+
+/*
+div.mes-projets .link {
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+      position: relative;
+      background-color: transparent;
+}
+
+div.mes-projets .link:hover {
+      color: rgb(255, 255, 255);
 }
 
 div.mes-projets .link::before {
-  content: " ";
-  background-color: red;
-  position: absolute;
-  height: 2px;
-  width: 14px;
-  top: 18px;
-  right: 20px;
+      content: '';
+      background-color: #060b15;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.6s ease;
+      height: 100%;
+      width: 0%;
 }
+
+div.mes-projets .link:hover::before {
+      width: 100%;
+}*/
 
 /*# sourceMappingURL=index.css.map */
