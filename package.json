@@ -1,0 +1,30 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "portefolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/scss/index.scss public/css/index.css --watch",
+    "ts": "tsc --watch",
+    "watcher": "concurrently \"npm run sass\" \"npm run ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClementChevrin/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClementChevrin/Portfolio/issues"
+  },
+  "homepage": "https://github.com/ClementChevrin/Portfolio#readme",
+  "dependencies": {
+    "sass": "^1.77.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
+  }
+}

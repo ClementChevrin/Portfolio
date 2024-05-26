@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-display";
+  src: url("./../fonts/playfair_display/PlayfairDisplay-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --background-1: #f9f4ea;
+  --background-2: #f1eadc;
+  --background-1-dark: #060b15;
+  --background-2-dark: #0e1523;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+.trans-03 {
+  transition: all 0.3s ease;
+}
+
+.trans-02 {
+  transition: all 0.2s ease;
+}
+
+h1 {
+  font-family: "Playfair-display";
+}
+
+body.dark-theme nav.navbar {
+  background-color: var(--background-1-dark);
+}
+
+body.dark-theme div.presentation {
+  background-color: var(--background-2-dark);
+}
+
+nav.navbar {
+  background-color: var(--background-1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60px;
+}
+
+nav.navbar ul.list-title {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+nav.navbar li {
+  padding: 0 20px;
+}
+
+div.presentation {
+  background-color: var(--background-2);
+}
+
+div.mes-projets {
+  background-color: var(--background-2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+
+div.mes-projets .projets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.mes-projets .projet {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+div.mes-projets .projet .carrousel {
+  width: 250px;
+  height: 175px;
+  overflow: hidden;
+  position: relative;
+}
+
+div.mes-projets .projet .carrousel .left {
+  width: 30px;
+  height: 175px;
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  cursor: pointer;
+  border-top-right-radius: 20px 87px;
+  border-bottom-right-radius: 20px 87px;
+}
+
+div.mes-projets .projet .carrousel .left:hover {
+  width: 50px;
+  opacity: 1;
+  background-color: rgba(211, 211, 211, 0.548);
+}
+
+div.mes-projets .projet .carrousel .left::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px #444444 solid;
+  border-left: 3px #444444 solid;
+  transform: rotateZ(315deg);
+  position: absolute;
+  top: 82px;
+  left: 10px;
+  transition: all 0.2s ease;
+}
+
+div.mes-projets .projet .carrousel .left:hover::before {
+  left: 22px;
+  transition: all 0.2s ease;
+}
+
+div.mes-projets .projet .carrousel .right {
+  width: 30px;
+  height: 175px;
+  opacity: 0;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  border-top-left-radius: 10px 87px;
+  border-bottom-left-radius: 10px 87px;
+}
+
+div.mes-projets .projet .carrousel .right:hover {
+  width: 50px;
+  opacity: 1;
+  background-color: rgba(211, 211, 211, 0.548);
+}
+
+div.mes-projets .projet .carrousel .right::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px #444444 solid;
+  border-right: 3px #444444 solid;
+  transform: rotateZ(45deg);
+  position: absolute;
+  top: 82px;
+  right: 10px;
+  transition: all 0.2s ease;
+}
+
+div.mes-projets .projet .carrousel .right:hover::before {
+  right: 22px;
+  transition: all 0.2s ease;
+}
+
+div.mes-projets .projet .items-carrousel {
+  height: 175px;
+  display: flex;
+  flex-direction: row;
+}
+
+div.mes-projets .projet h2 {
+  padding: 10px 10px 5px 10px;
+}
+
+div.mes-projets .projet p {
+  padding: 0px 10px 10px 10px;
+}
+
+div.mes-projets .link {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  position: relative;
+}
+
+div.mes-projets .link:hover {
+  color: rgb(255, 255, 255);
+  background-color: #060b15;
+}
+
+div.mes-projets .link::after {
+  content: " ";
+  border-right: red 2px solid;
+  border-top: red 2px solid;
+  transform: rotateZ(45deg);
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  top: 14px;
+  right: 20px;
+}
+
+div.mes-projets .link::before {
+  content: " ";
+  background-color: red;
+  position: absolute;
+  height: 2px;
+  width: 14px;
+  top: 18px;
+  right: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

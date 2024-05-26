@@ -1,0 +1,16 @@
+{
+      "compilerOptions": {
+            "target": "ES5",
+            "module": "commonjs",
+            "outDir": "./public/javascript",
+            "rootDir": "./assets/typescript",
+            "esModuleInterop": true,
+            "skipLibCheck": true
+      },
+      "include": [
+            "./assets/typescript/**/*.ts"
+      ],
+      "exclude": [
+            "node_modules"
+      ]
+}
