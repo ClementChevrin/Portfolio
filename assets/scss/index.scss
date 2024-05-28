@@ -93,8 +93,22 @@ nav.navbar {
 div.mes-projets .projets {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       width: 270px;
       margin-bottom: 30px;
+      transition: all 0.3s ease;
+      @media screen and (min-width:590px)
+      {
+            width: 540px;
+            @media screen and (min-width:860px)
+            {
+                  width: 810px;
+                  @media screen and (min-width:1130px)
+                  {
+                        width: 1080px;
+                  }
+            }
+      }
 }
 
 div.projet {
