@@ -1,31 +1,11 @@
-@font-face {
-      font-family: 'Montserrat';
-      src: url('./../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-}
-
-@font-face {
-      font-family: 'Playfair-display';
-      src: url('./../fonts/playfair_display/PlayfairDisplay-Medium.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-}
-
-$color-background-1: #f9f4ea;
-$color-background-2: #f1eadc;
-$color-text: #000000;
-$color-text-hover: #222222;
-$color-text-invert: #ffffff;
-$color-background-1-invert: #060b15;
-$color-background-1-dark: #060b15;
-$color-background-2-dark: #0e1523;
+@import './var/color.scss';
+@import './var/font.scss';
+@import './projets.scss';
 
 * {
       margin: 0;
       padding: 0;
-      font-family: 'Montserrat';
-      overflow-x: hidden;
+      font-family: $font-monstserrat;
 
       &::-webkit-scrollbar {
             display: none;
@@ -35,37 +15,19 @@ $color-background-2-dark: #0e1523;
 
 body {
       width: 100vw;
-      overflow-x: hidden;
-
-      >div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: $color-background-1;
-            width: 100vw;
-            overflow-x: hidden;
-
-            &:nth-child(2n) {
-                  background-color: $color-background-2;
-            }
-      }
+      width: 100vh;
 }
 
 
 
 h1 {
-      font-family: 'Playfair-display';
+      font-family: $font-playfair;
       font-size: 18pt;
       margin: 20px 0;
       -moz-user-select: none;
-      /* Firefox */
       -webkit-user-select: none;
-      /* Chrome, Safari, Opéra depuis la version 15 */
       -ms-user-select: none;
-      /* Internet explorer depuis la version 10 et Edge */
       user-select: none;
-      /* Propriété standard */
 }
 
 nav.navbar {
@@ -78,10 +40,17 @@ nav.navbar {
       width: 100vw;
       overflow-x: hidden;
 
+      h1{
+
+      }
+
       ul.list-title {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            display: none;
+            @media screen and (min-width:500px){
+                  display: flex;
+                  flex-direction: row;
+                  list-style: none;
+            }
 
             li {
                   padding: 0 20px;
@@ -89,96 +58,23 @@ nav.navbar {
 
       }
 }
-
-div.mes-projets .projets {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 270px;
-      margin-bottom: 30px;
-      transition: all 0.3s ease;
-      @media screen and (min-width:590px)
-      {
-            width: 540px;
-            @media screen and (min-width:860px)
-            {
-                  width: 810px;
-                  @media screen and (min-width:1130px)
-                  {
-                        width: 1080px;
-                  }
-            }
-      }
-}
-
-div.projet {
-      background-color: #ffffff;
+div.scroll-content{
+      width: 100%;
+      height: calc(100vh - 60px);
+      overflow: scroll;
       display: flex;
       flex-direction: column;
-      margin: 10px;
-      overflow: hidden;
-      width: 250px;
-      -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.02);
-      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.02);
+      div.content>div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-background-1;
+            width: 100vw;
+            overflow-x: hidden;
 
-      img {
-            width: 250px;
-            height: 175px;
-      }
-
-      h2 {
-            padding: 10px 10px 5px 10px;
-      }
-
-      p {
-            padding: 0px 10px 10px 10px;
-            font-size: 10pt;
-            text-align: justify;
-      }
-
-      a.link {
-            position: relative;
-            z-index: 1;
-            padding: 10px;
-            text-decoration: none;
-            color: $color-text;
-            font-weight: 700;
-            transition: all 0.6s ease;
-            background-color: transparent;
-
-
-            &::before {
-                  transition: all 0.6s ease;
-                  content: '';
-                  position: absolute;
-                  top: 0px;
-                  left: 0px;
-                  z-index: -1;
-                  width: 0%;
-                  height: 100%;
-                  background-color: $color-background-1-invert;
-            }
-
-            &:hover {
-                  color: $color-text-invert;
-
-                  &::before {
-                        width: 100%;
-                  }
-
-                  img {
-                        position: absolute;
-                        filter: brightness(0) saturate(100%) invert(100%) sepia(96%) saturate(15%) hue-rotate(212deg) brightness(104%) contrast(104%);
-                  }
-            }
-
-            img {
-                  transition: all 0.6s cubic-bezier(1, 0.59, 0.39, 1);
-                  position: absolute;
-                  right: 10px;
-                  top: 8px;
-                  width: 22px;
-                  height: 22px;
+            &:nth-child(2n) {
+                  background-color: $color-background-2;
             }
       }
 }
