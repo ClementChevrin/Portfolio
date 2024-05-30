@@ -27,9 +27,9 @@ div.mes-projets {
 }
 div.mes-projets .projets {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   width: 270px;
   margin-bottom: 30px;
   transition: all 0.3s ease;
@@ -124,7 +124,7 @@ div.projet a.link img {
 
 body {
   width: 100vw;
-  width: 100vh;
+  height: 100vh;
 }
 
 h1 {
@@ -142,15 +142,18 @@ nav.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 60px;
   width: 100vw;
   overflow-x: hidden;
 }
+nav.navbar h1 {
+  margin: 0 20px;
+}
 nav.navbar ul.list-title {
   display: none;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 990px) {
   nav.navbar ul.list-title {
     display: flex;
     flex-direction: row;
@@ -159,10 +162,19 @@ nav.navbar ul.list-title {
 }
 nav.navbar ul.list-title li {
   padding: 0 20px;
+  width: 150px;
+  text-align: center;
+}
+nav.navbar ul.list-title li a {
+  text-decoration: none;
+  color: #000000;
+}
+nav.navbar ul.list-title li a:hover {
+  color: #222222;
 }
 
 div.scroll-content {
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 60px);
   overflow: scroll;
   display: flex;

@@ -3,9 +3,9 @@
 
 div.mes-projets {flex-direction: column;.projets {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: 270px;
     margin-bottom: 30px;
     transition: all 0.3s ease;
