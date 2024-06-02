@@ -1,0 +1,72 @@
+@import './var/color.scss';
+@import './var/font.scss';
+
+div.presentation {
+
+      div.detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.2s ease;
+
+            h1 {
+                  font-size: 38pt;
+                  text-align: center;
+                  max-width: 340px;
+            }
+
+            p {
+                  text-align: center;
+                  margin: 0 20px;
+                  transition: all 0.2s ease;
+
+            }
+      }
+
+      img {
+            margin: 50px 0;
+            aspect-ratio: 2 / 3;
+            height: 340px;
+            transition: all 0.2s ease;
+      }
+
+      @media screen and (min-width:500px) {
+            div.detail {
+                  p {
+                        margin: 0;
+                        width: 450px;
+                  }
+            }
+
+            img {
+                  height: 400px;
+            }
+
+            @media screen and (min-width:930px) {
+                  flex-direction: row !important;
+
+                  div.detail {
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        align-items: flex-start;
+
+                        h1,
+                        p {
+                              text-align: left;
+                        }
+                  }
+
+                  img {
+                        margin: 0;
+                        height: 466px;
+                  }
+            }
+
+            @media screen and (min-width:970px) {
+
+                  div.detail {
+                        margin-right: 60px;
+                  }
+            }
+      }
+}

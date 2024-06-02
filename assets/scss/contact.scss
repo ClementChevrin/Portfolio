@@ -1,0 +1,83 @@
+@import './var/color.scss';
+@import './var/font.scss';
+
+div.contact {
+      padding: 20px 0;
+
+      div {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 0 15px;
+            transition: all 0.2s ease;
+
+            @media screen and (min-width:800px) {
+                  flex-direction: row;
+                  justify-content: space-between;
+                  width: 750px;
+                  margin: 0;
+
+                  @media screen and (min-width:1130px) {
+                        width: 1060px;
+                  }
+            }
+
+            p {
+                  text-align: center;
+
+                  span {
+                        text-decoration: none;
+                        color: black;
+                        cursor: pointer;
+                  }
+            }
+
+            ul.social {
+                  display: flex;
+                  flex-direction: row;
+                  list-style: none;
+                  width: fit-content;
+
+                  li {
+                        display: flex;
+                        width: 20px;
+                        height: 20px;
+                        margin: 5px 10px;
+
+                        a {
+                              position: relative;
+
+                              img {
+                                    &.linkedin {
+                                          width: 20px;
+                                          height: 20px;
+                                    }
+
+                                    &.github {
+                                          width: 20px;
+                                          height: 20px;
+                                    }
+
+                                    &.codepen {
+                                          position: absolute;
+                                          top: -5px;
+                                          left: -5px;
+                                          width: 30px;
+                                          height: 30px;
+                                    }
+
+                                    &.mail {
+                                          width: 26px;
+                                          height: 26px;
+                                    }
+
+                                    &.phone {
+                                          width: 22px;
+                                          height: 22px;
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}

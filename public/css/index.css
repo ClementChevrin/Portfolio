@@ -22,6 +22,73 @@
   font-weight: normal;
   font-style: normal;
 }
+div.presentation div.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+div.presentation div.detail h1 {
+  font-size: 38pt;
+  text-align: center;
+  max-width: 340px;
+}
+div.presentation div.detail p {
+  text-align: center;
+  margin: 0 20px;
+  transition: all 0.2s ease;
+}
+div.presentation img {
+  margin: 50px 0;
+  aspect-ratio: 2/3;
+  height: 340px;
+  transition: all 0.2s ease;
+}
+@media screen and (min-width: 500px) {
+  div.presentation div.detail p {
+    margin: 0;
+    width: 450px;
+  }
+  div.presentation img {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 500px) and (min-width: 930px) {
+  div.presentation {
+    flex-direction: row !important;
+  }
+  div.presentation div.detail {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  div.presentation div.detail h1,
+  div.presentation div.detail p {
+    text-align: left;
+  }
+  div.presentation img {
+    margin: 0;
+    height: 466px;
+  }
+}
+@media screen and (min-width: 500px) and (min-width: 970px) {
+  div.presentation div.detail {
+    margin-right: 60px;
+  }
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-display";
+  src: url("./../fonts/playfair_display/PlayfairDisplay-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 div.mes-projets {
   flex-direction: column;
 }
@@ -109,6 +176,88 @@ div.projet a.link img {
   position: absolute;
   right: 10px;
   top: 8px;
+  width: 22px;
+  height: 22px;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-display";
+  src: url("./../fonts/playfair_display/PlayfairDisplay-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+div.contact {
+  padding: 20px 0;
+}
+div.contact div {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0 15px;
+  transition: all 0.2s ease;
+}
+@media screen and (min-width: 800px) {
+  div.contact div {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 750px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 800px) and (min-width: 1130px) {
+  div.contact div {
+    width: 1060px;
+  }
+}
+div.contact div p {
+  text-align: center;
+}
+div.contact div p span {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+div.contact div ul.social {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: fit-content;
+}
+div.contact div ul.social li {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin: 5px 10px;
+}
+div.contact div ul.social li a {
+  position: relative;
+}
+div.contact div ul.social li a img.linkedin {
+  width: 20px;
+  height: 20px;
+}
+div.contact div ul.social li a img.github {
+  width: 20px;
+  height: 20px;
+}
+div.contact div ul.social li a img.codepen {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+}
+div.contact div ul.social li a img.mail {
+  width: 26px;
+  height: 26px;
+}
+div.contact div ul.social li a img.phone {
   width: 22px;
   height: 22px;
 }
