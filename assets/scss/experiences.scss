@@ -1,0 +1,83 @@
+@import './var/color.scss';
+@import './var/font.scss';
+
+div.experiences {
+      padding-bottom: 30px;
+
+      ul.les-experiences {
+            list-style: none;
+
+            li.experience {
+                  border-left: 2px solid black;
+                  padding-left: 20px;
+                  margin: 0 40px;
+                  max-width: 590px;
+                  position: relative;
+
+                  &::before {
+                        content: '';
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50px;
+                        position: absolute;
+                        top: 0px;
+                        left: -12px;
+                        background-color: black;
+                        border: 2px solid white;
+                        outline-color: black;
+                        outline-style: solid;
+                        outline-width: 2px;
+                        outline-offset: 0px;
+                  }
+
+                  &:first-child {
+                        margin-bottom: 10px;
+                  }
+
+                  h2.entreprise {
+                        font-size: 12pt;
+                  }
+
+                  h3.poste {
+                        font-size: 10pt;
+                  }
+
+                  ul.missions {
+                        list-style: none;
+                        margin: 10px 0;
+
+                        li.item-mission {
+                              margin: 2px 0;
+
+                              p.description {
+
+                                    font-size: 8pt;
+
+                                    span.mission {
+                                          font-size: 8pt;
+                                          font-weight: 700;
+
+                                          &::after {
+                                                content: ':';
+                                                margin: 0 5px;
+                                          }
+                                    }
+                              }
+                        }
+                  }
+
+                  div.date {
+                        display: flex;
+                        flex-direction: row;
+
+                        p {
+                              &:last-child {
+                                    &::before {
+                                          content: ' - ';
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+}

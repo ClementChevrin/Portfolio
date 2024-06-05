@@ -1,8 +1,11 @@
 @import './var/color.scss';
-@import './var/font.scss';
+@import './about.scss';
+@import './competences.scss';
+@import './contact.scss';
+@import './experiences.scss';
 @import './presentation.scss';
 @import './projets.scss';
-@import './contact.scss';
+@import './var/font.scss';
 
 * {
       margin: 0;
@@ -59,6 +62,8 @@ nav.navbar {
                   padding: 0 20px;
                   width: 150px;
                   text-align: center;
+                  position: relative;
+                  z-index: 1;
 
                   a {
                         text-decoration: none;
@@ -66,6 +71,29 @@ nav.navbar {
 
                         &:hover {
                               color: $color-text-hover
+                        }
+                  }
+
+                  &:before {
+                        content: '';
+                        position: absolute;
+                        width: 0px;
+                        height: 61px;
+                        z-index: -1;
+                        background-color: black;
+                        top: -22px;
+                        left: 50%;
+                        transition: all 0.3s ease;
+                  }
+
+                  &:hover {
+                        &::before {
+                              width: 100%;
+                              left: 0%;
+                        }
+
+                        a {
+                              color: white;
                         }
                   }
             }
@@ -87,7 +115,6 @@ div.scroll-content {
             justify-content: center;
             background-color: $color-background-1;
             width: 100vw;
-            overflow-x: hidden;
 
             &:nth-child(2n) {
                   background-color: $color-background-2;
