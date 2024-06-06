@@ -155,19 +155,61 @@ div.projet {
             height: var(--responsive-height);
             aspect-ratio: 10/7;
             overflow: hidden;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
 
             div.images-row {
                   height: inherit;
                   display: flex;
                   flex-direction: row;
-                  transition: all 0.2s ease;
+                  transition: all 0.3s ease;
 
                   img {
                         height: inherit;
                         aspect-ratio: 10/7;
-                        transition: all 0.2s ease;
+                        transition: all 0.3s ease;
+                        z-index: 2;
+                        object-fit: contain;
+
+                        &:first-child {
+                              z-index: 1;
+                        }
                   }
+            }
+      }
+
+      div.description {
+            max-width: 600px;
+            min-height: 460px;
+            margin: 0 20px;
+            padding-bottom: 30px;
+
+            ul.tags {
+                  padding: 10px 10px 5px 10px;
+                  display: flex;
+                  flex-direction: row;
+                  list-style: none;
+                  margin-left: -10px;
+                  margin-top: 10px;
+
+
+                  li {
+                        margin: 2px;
+                        padding: 4px;
+                        background-color: white;
+                        font-size: 10pt;
+                  }
+            }
+
+            h2 {
+                  margin: 10px 0;
+            }
+
+            p {
+                  text-indent: 30px;
+            }
+
+            ul.text {
+                  margin-left: 16px;
             }
       }
 }

@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-      let globalCurrentSlide = 0;
-      let delai = 2000;
+      let globalCurrentSlide = 1;
+      let delai = 5000;
       const slidable = () => {
             let carrousel = document.getElementById("carrousel");
             if (carrousel) {
                   let nbImage = carrousel.children.length;
-                  if (nbImage < globalCurrentSlide) {
-
+                  if (nbImage + 1 == globalCurrentSlide) {
+                        let firstimage = document.getElementById("carrousel-first");
+                        if (firstimage) {
+                              firstimage.style.transform = "translateX(0)";
+                              carrousel.style.transform = "translateX(0)";
+                              globalCurrentSlide = 1;
+                        }
                   }
                   else {
-                        carrousel.style.transform = "translateX(calc(var(--responsive-translate) * -1 * " + globalCurrentSlide + "))";
+                        if (nbImage - 2 < globalCurrentSlide) {
+                              let firstimage = document.getElementById("carrousel-first");
+                              if (firstimage) {
+                                    firstimage.style.transform = "translateX(calc(var(--responsive-translate) * " + nbImage + "))";
+                              }
+                        }
                   }
+                  carrousel.style.transform = "translateX(calc(var(--responsive-translate) * " + (globalCurrentSlide * -1) + "))";
                   globalCurrentSlide++;
             }
       }
