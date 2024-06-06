@@ -248,7 +248,7 @@ div.experiences ul.les-experiences li.experience div.date p:last-child::before {
 }
 div.presentation {
   position: relative;
-  padding-bottom: 90px;
+  padding-bottom: 130px;
 }
 div.presentation div.detail {
   display: flex;
@@ -266,15 +266,18 @@ div.presentation div.detail p {
   margin: 0 20px;
   transition: all 0.2s ease;
 }
-div.presentation img {
+div.presentation img.portrait {
   margin: 50px 0;
   aspect-ratio: 2/3;
-  height: 340px;
+  height: 490px;
   transition: all 0.2s ease;
+  object-fit: contain;
+  display: none;
+  z-index: 2;
 }
 div.presentation div.metiers {
   position: absolute;
-  top: 715px;
+  top: 325px;
   z-index: 10;
   width: 260px;
   height: 200px;
@@ -343,40 +346,55 @@ div.presentation div.metiers div.metier div p {
 @media screen and (min-width: 500px) and (min-width: 930px) {
   div.presentation {
     flex-direction: row !important;
-    padding-bottom: 135px;
+    padding-bottom: 0px;
   }
   div.presentation div.detail {
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 90px;
     align-items: flex-start;
+    position: relative;
+  }
+  div.presentation div.detail::before {
+    content: "";
+    background-color: #f1eadc;
+    border-radius: 150px;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 520px;
+    z-index: 1;
   }
   div.presentation div.detail h1,
   div.presentation div.detail p {
     text-align: left;
   }
-  div.presentation img {
+  div.presentation img.portrait {
+    display: block;
     margin: 0;
-    height: 466px;
   }
 }
 @media screen and (min-width: 500px) and (min-width: 970px) {
   div.presentation div.detail {
     margin-right: 60px;
   }
+  div.presentation div.detail::before {
+    left: 550px;
+  }
 }
 @media screen and (min-width: 361px) {
   div.presentation div.metiers {
-    top: 700px;
+    top: 310px;
   }
 }
 @media screen and (min-width: 361px) and (min-width: 420px) {
   div.presentation div.metiers {
-    top: 680px;
+    top: 280px;
   }
 }
 @media screen and (min-width: 361px) and (min-width: 420px) and (min-width: 500px) {
   div.presentation div.metiers {
-    top: 740px;
+    top: 280px;
   }
 }
 @media screen and (min-width: 361px) and (min-width: 420px) and (min-width: 500px) and (min-width: 590px) {
@@ -400,7 +418,7 @@ div.presentation div.metiers div.metier div p {
 }
 @media screen and (min-width: 361px) and (min-width: 420px) and (min-width: 500px) and (min-width: 590px) and (min-width: 740px) and (min-width: 930px) {
   div.presentation div.metiers {
-    top: 500px;
+    top: 390px;
   }
 }
 

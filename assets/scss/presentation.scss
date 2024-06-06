@@ -3,7 +3,7 @@
 
 div.presentation {
       position: relative;
-      padding-bottom: 90px;
+      padding-bottom: 130px;
 
       div.detail {
             display: flex;
@@ -25,16 +25,19 @@ div.presentation {
             }
       }
 
-      img {
+      img.portrait {
             margin: 50px 0;
             aspect-ratio: 2 / 3;
-            height: 340px;
+            height: 490px;
             transition: all 0.2s ease;
+            object-fit: contain;
+            display: none;
+            z-index: 2;
       }
 
       div.metiers {
             position: absolute;
-            top: 715px;
+            top: 325px;
             z-index: 10;
             width: 260px;
             height: 200px;
@@ -116,12 +119,25 @@ div.presentation {
 
             @media screen and (min-width:930px) {
                   flex-direction: row !important;
-                  padding-bottom: 135px;
+                  padding-bottom: 0px;
 
                   div.detail {
                         margin-right: 20px;
-                        margin-bottom: 20px;
+                        margin-bottom: 90px;
                         align-items: flex-start;
+                        position: relative;
+
+                        &::before {
+                              content: '';
+                              background-color: $color-background-2;
+                              border-radius: 150px;
+                              height: 300px;
+                              width: 300px;
+                              position: absolute;
+                              top: 0px;
+                              left: 520px;
+                              z-index: 1;
+                        }
 
                         h1,
                         p {
@@ -129,9 +145,9 @@ div.presentation {
                         }
                   }
 
-                  img {
+                  img.portrait {
+                        display: block;
                         margin: 0;
-                        height: 466px;
                   }
             }
 
@@ -139,23 +155,27 @@ div.presentation {
 
                   div.detail {
                         margin-right: 60px;
+
+                        &::before {
+                              left: 550px;
+                        }
                   }
             }
       }
 
       @media screen and (min-width:361px) {
             div.metiers {
-                  top: 700px;
+                  top: 310px;
             }
 
             @media screen and (min-width:420px) {
                   div.metiers {
-                        top: 680px;
+                        top: 280px;
                   }
 
                   @media screen and (min-width:500px) {
                         div.metiers {
-                              top: 740px;
+                              top: 280px;
                         }
 
                         @media screen and (min-width:590px) {
@@ -182,7 +202,7 @@ div.presentation {
 
                                     @media screen and (min-width:930px) {
                                           div.metiers {
-                                                top: 500px;
+                                                top: 390px;
                                           }
                                     }
                               }

@@ -4,9 +4,10 @@
   "description": "portefolio",
   "main": "index.js",
   "scripts": {
-    "sass": "sass assets/scss/index.scss public/css/index.css --watch",
+    "index": "sass assets/scss/index.scss public/css/index.css --watch",
+    "pages": "sass assets/scss/pages.scss public/css/pages.css --watch",
     "ts": "tsc --watch",
-    "watcher": "concurrently \"npm run sass\" \"npm run ts\""
+    "watcher": "concurrently \"npm run index\" \"npm run pages\" \"npm run ts\""
   },
   "repository": {
     "type": "git",
