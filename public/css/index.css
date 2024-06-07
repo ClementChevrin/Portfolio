@@ -496,6 +496,8 @@ div.projet p {
   padding: 0px 10px 10px 10px;
   font-size: 8pt;
   text-align: justify;
+  word-break: break-all;
+  min-height: 92px;
 }
 div.projet a.link {
   position: relative;

@@ -267,9 +267,15 @@ div.projet div.description h2 {
 }
 div.projet div.description p {
   text-indent: 30px;
+  text-align: justify;
+  word-break: break-all;
 }
 div.projet div.description ul.text {
   margin-left: 16px;
+}
+div.projet div.description ul.text li {
+  text-align: justify;
+  word-break: break-all;
 }
 
 /*# sourceMappingURL=pages.css.map */

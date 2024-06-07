@@ -206,10 +206,17 @@ div.projet {
 
             p {
                   text-indent: 30px;
+                  text-align: justify;
+                  word-break: break-all;
             }
 
             ul.text {
                   margin-left: 16px;
+
+                  li {
+                        text-align: justify;
+                        word-break: break-all;
+                  }
             }
       }
 }
